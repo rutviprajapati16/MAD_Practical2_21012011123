@@ -17,11 +17,27 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         showMessage("On Start method is called.")
     }
-
+    override fun onPause() {
+        super.onPause()
+        showMessage("on pause method is called.")
+    }
+    override fun onStop() {
+        super.onStop()
+        showMessage("on stop method is called.")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        showMessage("on destroy method is called.")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        showMessage("on restart method is called.")
+    }
     override fun onResume() {
         super.onResume()
         showMessage("On Resume method is called.")
     }
+
     fun showMessage(message:String){
         Log.i(TAG, message)
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
